@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc -S -masm=intel -Wall -Werror -Wextra -pedantic $CFILE -o ${CFILE:0:-2}.s
