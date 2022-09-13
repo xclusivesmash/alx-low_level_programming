@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char var[] = "_putchar";
+	char var[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
 	int i;
 
 	for (i = 0; i <= (int) sizeof(var); i++)
