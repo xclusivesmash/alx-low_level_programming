@@ -7,13 +7,12 @@
  */
 int main(void)
 {
-	char var[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
+	char var[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r', '\n'};
 	int i;
 
 	for (i = 0; i <= (int) sizeof(var); i++)
 	{
 		_putchar(var[i]);
 	}
-	_putchar('\n');
 	return (0);
 }
