@@ -7,5 +7,6 @@
  */
 int _abs(int n)
 {
-	return n * ((n > 0) - (n < 0));
+	int abs_v = n * ((n > 0) - (n < 0));
+	return abs_v;
 }
