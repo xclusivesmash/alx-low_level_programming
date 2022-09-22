@@ -7,7 +7,7 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	char temp[100];
+	char temp[500];
 	int i;
 	int j;
 
