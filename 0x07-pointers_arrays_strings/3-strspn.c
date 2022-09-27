@@ -17,7 +17,7 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (accept[i] == s[j])
 			{
-				sum += 1;
+				sum++;
 				break;
 			}
 			j++;
