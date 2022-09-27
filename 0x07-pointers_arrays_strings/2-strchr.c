@@ -1,3 +1,5 @@
+#define NULL 0
+
 /**
 * *_strchr - locates a character in a string.
 * @s: string to search in
@@ -10,13 +12,13 @@ char *_strchr(char *s, char c)
 
 	i = 0;
 	/* first locate postion of c in s */
-	while (*(s + i) != '\0' && *(s + i) != c)
+	while (s[i] != '\0' && s[i] != c)
 	{
 		i++;
 	}
-	if (*(s + i) == c)
+	if (s[i] == c)
 	{
-		return (s + i);
+		return (&s[i]);
 	}
 	else
 	{
