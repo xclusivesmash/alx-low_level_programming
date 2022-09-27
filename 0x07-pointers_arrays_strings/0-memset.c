@@ -11,6 +11,8 @@ char *_memset(char *s, char b, unsigned int n)
 
 	if (length > 0)
 	{
+		int i;
+
 		for (i = 0; i < length; i++)
 		{
 			s[i] = b;
