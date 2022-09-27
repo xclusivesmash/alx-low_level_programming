@@ -22,11 +22,12 @@ void print_diagsums(int *a, int size)
 			{
 				sum1 += a[i][j];
 			}
-			if (j == (size - (i + 1)))
-			{
-				sum2 += a[i][j];
-			}
 		}
+	}
+	for (j = 1; j <= size; j++)
+	{
+		i = (j * size) - j;
+		sum2 += a[i];
 	}
 	printf("%d, %d\n", sum1, sum2);
 }
