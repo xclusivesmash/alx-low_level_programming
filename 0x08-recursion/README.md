@@ -10,4 +10,4 @@ Recursion is a powerful tool that can be used to solve a wide range of programmi
 5. **5-sqrt_recursion.c** - computes and returns the natual square root of a number. If n (number) does not have a natural square root, the function should return -1.<br>
 6. **6-is_prime_number.c** - returns 1 if the input integer is a prime number, otherwise returns 0.<br>
 7. **100-is_palindrome.c** - returns 1 if a string is palindrome and 0 if not. An empty string is a pallindrome.<br>
-8. **101-wildcmp.c** - compares two strings and returns 1 if the strings can be considered indentical, otherwise returns 0. String 2 can contains the special character *\*.<br>
+8. **101-wildcmp.c** - compares two strings and returns 1 if the strings can be considered indentical, otherwise returns 0. String 2 can contains the special character \*.<br>
