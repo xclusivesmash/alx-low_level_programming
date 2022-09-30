@@ -14,6 +14,7 @@ int prime_test(int n, int d)
 	{
 		return (1);
 	}
+	return (prime_test(n, d + 1));
 }
 
 /**
