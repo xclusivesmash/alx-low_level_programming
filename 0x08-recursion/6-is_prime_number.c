@@ -35,5 +35,9 @@ int is_prime_number(int n)
 	{
 		return (0);
 	}
+	if (n == 2)
+	{
+		return (1);
+	}
 	return (prime_test(n, i));
 }
