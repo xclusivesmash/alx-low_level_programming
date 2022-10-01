@@ -1,7 +1,20 @@
-## C - recursion
+# C - recursion
 
-Recursion is a powerful tool that can be used to solve a wide range of programming problems. Below is a filename and description of what each script does.
+### Description
+Recursion is a powerful tool that can be used to solve a wide range of programming problems. This repository contains worked out solutions to problems given by the ALX SE Programme. It is for learning important C concepts.
 
+### Requirements
+* Languages: C
+* OS: Ubuntu 20.04 LTS
+* Style Guide: <a href="https://github.com/holbertonschool/Betty/wiki">Betty Style</a>
+
+### Concepts
+* What is recursion?<br>
+* How to implement recursion?<br>
+* In what situations should you implement recursion?<br>
+* In what situations should you not implement recursion?<br>
+
+### Script functionality
 0. **0-puts_recursion.c** - prints a string folwed by a newline.<br>
 1. **1-print_rev_recursion.c** - prints a string in reverse.<br>
 2. **2-strlen_recursion.c** - finds and returns the length of a string.<br>
@@ -11,3 +24,9 @@ Recursion is a powerful tool that can be used to solve a wide range of programmi
 6. **6-is_prime_number.c** - returns 1 if the input integer is a prime number, otherwise returns 0.<br>
 7. **100-is_palindrome.c** - returns 1 if a string is palindrome and 0 if not. An empty string is a pallindrome.<br>
 8. **101-wildcmp.c** - compares two strings and returns 1 if the strings can be considered indentical, otherwise returns 0. String 2 can contains the special character \*.<br>
+
+### Authors
+* Siphamandla Matshiane
+
+### License
+* The Holberton School/ALX SE Programme
