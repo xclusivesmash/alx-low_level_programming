@@ -32,6 +32,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	/* dicover space needed */
+	len = 0;
 	for (i = 0; i < ac; i++)
 	{
 		len += _strlen(av[i]);
