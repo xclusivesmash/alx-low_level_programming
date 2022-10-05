@@ -54,5 +54,5 @@ char *argstostr(int ac, char **av)
 	}
 	/* every string ends with null character */
 	newstr[m] = '\0';
-	return (s);
+	return (newstr);
 }
