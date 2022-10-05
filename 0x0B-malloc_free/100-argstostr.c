@@ -36,7 +36,8 @@ char *argstostr(int ac, char **av)
 	{
 		len += _strlen(av[i]);
 	}
-	newstr = malloc((sizeof(char) * len) + ac + 1);
+	len = len + ac + 1 /* 1 for null */
+	newstr = malloc(sizeof(char) * len);
 	if (newstr == NULL)
 	{
 		free(newstr);
