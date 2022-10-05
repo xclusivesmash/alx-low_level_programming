@@ -27,7 +27,7 @@ int _strlen(char *s)
 */
 char *str_concat(char *s1, char *s2)
 {
-	int i, len1, len2;
+	int i, j, len1, len2;
 	char *newstr;
 
 	if (s1 == NULL)
@@ -46,12 +46,15 @@ char *str_concat(char *s1, char *s2)
 		newstr[i] = s1[i];
 		i++;
 	}
-	while (i < (len1 + len2))
+	i = 0;
+	j = len1;
+	while (j < (len1 + len2))
 	{
-		newstr[i] = s2[i];
+		newstr[j] = s2[i];
 		i++;
+		j++;
 	}
 	/* terminate the string will null character */
-	newstr[i] = '\0';
+	newstr[(len1 + len2) + 1] = '\0';
 	return (newstr);
 }
