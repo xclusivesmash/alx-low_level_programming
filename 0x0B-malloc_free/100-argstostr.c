@@ -49,12 +49,9 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; j < _strlen(av[i]); j++)
 		{
-			newstr[m] = av[i][j];
-			m++;
+			newstr[m++] = av[i][j];
 		}
-		newstr[m] = '\n';
+		newstr[m++] = '\n';
 	}
-	/* every string ends with null character */
-	newstr[m] = '\0';
 	return (newstr);
 }
