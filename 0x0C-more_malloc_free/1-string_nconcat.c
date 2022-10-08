@@ -42,7 +42,7 @@ char *string_concat(char *s1, char *s2, unsigned int n)
 	if (nn < 0)
 		return (NULL);
 
-	ptr = malloc((ln1 + nn) * sizeof(char) + 1);
+	ptr = malloc((ln1 + nn + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
 	/* start filling the empty spaces */
