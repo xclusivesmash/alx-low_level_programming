@@ -19,6 +19,13 @@ int main(int argc, char **argv)
 		_putchar('\n');
 		exit(98);
 	}
+	if (argv[1][0] == '-' || argv[2][0] == '-')
+	{
+		for (j = 0; s[j] != '\0'; j++)
+			_putchar(s[j]);
+		_putchar('\n');
+		exit(98);
+	}
 	for (i = 0; argv[1][i] != '\0'; i++)
 	{
 		if (!(argv[1][i] >= '0' && argv[1][i] <= '9'))
