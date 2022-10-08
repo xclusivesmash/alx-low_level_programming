@@ -21,7 +21,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	j = 0;
 	while (j < (nmemb * size))
 	{
-		ptr[j] = 0;
+		*((char *)ptr + j) = 0;
 		j++;
 	}
 	return (ptr);
