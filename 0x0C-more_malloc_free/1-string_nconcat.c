@@ -27,16 +27,22 @@ int _strlen(char *s)
 */
 char *string_concat(char *s1, char *s2, unsigned int n)
 {
-	int ln1, ln2, i;
+	int nn, ln1, ln2, i, j;
 	char *ptr;
 
+	nn = n;
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 	ln1 = _strlen(s1);
 	ln2 = _strlen(s2);
-	ptr = malloc((ln1 + ln2) * sizeof(char) + 1);
+	if (nn >= ln2)
+		nn = ln2;
+	if (nn < 0)
+		return (NULL);
+
+	ptr = malloc((ln1 + nn) * sizeof(char) + 1);
 	if (ptr == NULL)
 		return (NULL);
 	/* start filling the empty spaces */
@@ -46,24 +52,10 @@ char *string_concat(char *s1, char *s2, unsigned int n)
 		ptr[i] = s1[i];
 		i++;
 	}
-	if ((int) n >= ln2)
+	for (j = 0; j < nn; j++)
 	{
-		i = 0;
-		while (i < ln2)
-		{
-			ptr[ln1 + i] = s2[i];
-			i++;
-		}
+		ptr[i + j] = s2[j];
 	}
-	else
-	{
-		i = 0;
-		while (i < (int) n)
-		{
-			ptr[ln1 + i] = s2[i];
-			i++;
-		}
-	}
-	ptr[ln1 + (int) n] = '\0';
+	ptr[i + j] = '\0';
 	return (ptr);
 }
