@@ -46,7 +46,7 @@ char *string_concat(char *s1, char *s2, unsigned int n)
 		ptr[i] = s1[i];
 		i++;
 	}
-	if (n >= ln2)
+	if ((int) n >= ln2)
 	{
 		i = 0;
 		while (i < ln2)
@@ -58,12 +58,12 @@ char *string_concat(char *s1, char *s2, unsigned int n)
 	else
 	{
 		i = 0;
-		while (i < n)
+		while (i < (int) n)
 		{
 			ptr[ln1 + i] = s2[i];
 			i++;
 		}
 	}
-	ptr[ln1 + n] = '\0';
+	ptr[ln1 + (int) n] = '\0';
 	return (ptr);
 }
