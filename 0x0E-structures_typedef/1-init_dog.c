@@ -1,3 +1,5 @@
+#include "dog.h"
+
 /**
 * init_dog - initializes a struct of dog family
 * @d: address to member of struct dog
