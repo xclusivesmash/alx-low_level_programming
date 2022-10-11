@@ -21,9 +21,9 @@ As part of learning programming through the C programming language, structures a
 5. **4-new_dog.c** - creates a new dog type.<br>
 6. **5-free_dog.c** - frees dogs.<br>
 
-<hr>
+<hr/>
 ### Authors
 * Siphamandla Matshiane
-<hr>
+<hr/>
 ### License
 * The Holberton School/ALX SE Programme
