@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include "dog.h"
 
+int _strlen(char *s);
+
 /**
 * _strcpy - copies ones string contents to another
 * @dest:base string
