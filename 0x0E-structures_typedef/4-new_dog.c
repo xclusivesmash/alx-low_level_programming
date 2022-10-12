@@ -54,6 +54,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (d_new == NULL)
 		return (NULL);
 
+	(*d_new).age = age;
+
 	if (name == NULL)
 		(*d_new).name = NULL;
 	else
