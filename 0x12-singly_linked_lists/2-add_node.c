@@ -44,15 +44,7 @@ list_t *add_node(list_t **head, const char *str)
 	/* fill data to new */
 	new->str = strdup(str);
 	new->len = _strlen(str);
-
-	if (head != NULL)
-	{
-		new->next = *head;
-	}
-	else
-	{
-		new->next = NULL;
-	}
+	new->next = *head;
 	*head = new;
 	return (new);
 }
