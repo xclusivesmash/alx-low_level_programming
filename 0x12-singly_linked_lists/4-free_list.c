@@ -12,7 +12,6 @@ void free_list(list_t *head)
 	list_t *tmp;
 
 	if (head == NULL)
-		free(head);
 		return;
 
 	while (head != NULL)
@@ -20,7 +19,6 @@ void free_list(list_t *head)
 		/* make a copy of head */
 		tmp = head;
 		free(tmp->str);
-		free(tmp->len);
 		free(tmp);
 
 		/* update head */
