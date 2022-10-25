@@ -5,7 +5,7 @@
 * @head: pointer to pointer to listint_t
 * Return: linked list's data (n)
 */
-int pop_listint(listint **head)
+int pop_listint(listint_t **head)
 {
 	listint_t *holder;
 	int num;
