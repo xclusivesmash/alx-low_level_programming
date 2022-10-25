@@ -5,9 +5,9 @@
 * @h: linked list
 * Return: number of nodes
 */
-int listint_len(listint_t *h)
+unsigned int listint_len(listint_t *h)
 {
-	int n;
+	unsigned int n;
 
 	n = 0;
 	while (h != NULL)
@@ -27,7 +27,7 @@ int listint_len(listint_t *h)
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *node_ptr;
-	int ncount;
+	unsigned int ncount;
 
 	ncount = listint_len(head);
 	if (head == NULL)
