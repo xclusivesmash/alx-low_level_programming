@@ -26,7 +26,6 @@ unsigned int listint_len(listint_t *h)
 */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *node_ptr;
 	unsigned int ncount;
 
 	ncount = listint_len(head);
@@ -38,16 +37,12 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	/* check if index is within bounds */
 	if (index >= 0 && index < ncount)
 	{
-		node_ptr = head;
-		while (ncount > 0)
+		while (index > 0 && head != NULL)
 		{
-			node_ptr = node_ptr->next;
-			ncount = ncount - 1;
+			head = head->next;
+			index = index - 1;
 		}
-		return (node_ptr);
+		return (head);
 	}
-	else
-	{
-		return (NULL);
-	}
+	return (NULL);
 }
