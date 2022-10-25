@@ -35,9 +35,9 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	}
 
 	/* check if index is within bounds */
-	if (index >= 0 && index < ncount)
+	if ((index >= 0) && (index < ncount))
 	{
-		while (index > 0 && head != NULL)
+		while ((index > 0) && (head != NULL))
 		{
 			head = head->next;
 			index = index - 1;
