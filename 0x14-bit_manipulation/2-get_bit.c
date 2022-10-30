@@ -10,16 +10,16 @@
 */
 int get_bit(unsigned long int n, unsigned int index)
 {
+	int bit;
 	unsigned int max_size;
-	int mask = 1, bit;
 
-	max_size = sizeof(unsigned int) * 8;
+	max_size = sizeof(unsigned long int) * 8;
 	/* check if index is within bounds */
-	if (index < 0 || index > max_size)
+	if (index > max_size)
 	{
 		return (-1);
 	}
-	mask = mask << index;
-	bit = n & mask;
+
+	bit = (n >> index) & 1;
 	return (bit);
 }
