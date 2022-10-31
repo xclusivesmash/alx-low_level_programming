@@ -66,7 +66,7 @@ int main(int argc, char **argv)
 		close(fd);
 	/* check file descriptor for file 2 */
 	if (fd1 == -1)
-		__exit(100, NULL, fd1);
+		__exit_status(100, NULL, fd1);
 	else
 		close(fd1);
 	return (0);
