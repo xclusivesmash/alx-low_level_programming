@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 	if (argc != 3)
 		__exit_status(97, NULL, 0);
 	/* fd == read from */
-	fd = open(agrv[1], O_RDONLY);
+	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 		__exit_status(98, argv[1], 0);
 	/* fd1 == copy to */
