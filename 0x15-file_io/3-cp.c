@@ -60,12 +60,12 @@ int main(int argc, char **argv)
 			__exit_status(99, argv[2], 0);
 	}
 	/* check file descriptor for file 1 */
-	if (fd == -1)
+	if (close(fd) == -1)
 		__exit_status(100, NULL, fd);
 	else
 		close(fd);
 	/* check file descriptor for file 2 */
-	if (fd1 == -1)
+	if (close(fd1) == -1)
 		__exit_status(100, NULL, fd1);
 	else
 		close(fd1);
