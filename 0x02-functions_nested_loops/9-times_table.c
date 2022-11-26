@@ -10,18 +10,29 @@ void times_table(void)
 
     for (i = 0; i <= 9; i++)
     {
-        for (j = 0; j < 9; j++)
+        for (j = 0; j <= 9; j++)
         {
             product = i * j;
-            _putchar('0' + product);
-            if (j == (9 - 1))
+            if (product <= 9)
+                _putchar('0' + product);
+            else
+            {
+                _putchar('0' + product / 10);
+                _putchar('0' + product % 10);
+            }
+            if (j == 9)
             {
                 _putchar('$');
+            }
+            else if (product <= 9)
+            {
+                _putchar(',');
+                _putchar(' ');
+                _putchar(' ');
             }
             else
             {
                 _putchar(',');
-                _putchar(' ');
                 _putchar(' ');
             }
         }
