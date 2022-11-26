@@ -11,12 +11,12 @@ int main(void)
     long int next, counter = 0;
 
     printf("%li, %li, ", a, b);
-    while (counter <= (50 - 2))
+    while (counter < (50 - 2))
     {
         next = a + b;
         printf("%li", next);
         a = b; b = next;
-        if (counter == (50 - 2))
+        if (counter == (50 - 3))
         {
             printf("\n");
         }
