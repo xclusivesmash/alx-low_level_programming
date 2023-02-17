@@ -6,7 +6,7 @@ This repository contains C files that are created to develop software engineerin
 ### Requirements
 * Language(s): `C`
 * Operating System: `Ubuntu 20.04 LTS`
-* Allowed Editors: `vi`, `vim, `emacs`
+* Allowed Editors: `vi`, `vim`, or `emacs`
 * All the C files are compiled on Ubuntu 20.04 LTS using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`.
 * The use of `system` is not allowed.
 * Code Style: <a href="https://github.com/holbertonschool/Betty">Betty Style</a>
