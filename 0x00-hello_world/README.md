@@ -53,7 +53,7 @@ Size of a float: 4 byte(s)
 julien@ubuntu:~/c/0x00$ echo $?
 0
 julien@ubuntu:~/c/0x00$ 
-```<br>
+```
 7. **100-intel** - Generates the assembly code (Intel syntax) of a C code and save it in an output file. The C file name will be saved in the variable `$CFILE`. The output file should be named the same as the C file, but with the extension `.s` instead of `.c`.<br>
 8. **101-quote.c** - prints exactly `and that piece of art is useful" - Dora Korpar, 2015-10-19`, followed by a new line, to the standard error. You are not allowed to use any functions listed in the NAME section of the man (3) `printf` or man (3) `puts`. The program should return 1.<br>
 
