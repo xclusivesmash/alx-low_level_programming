@@ -35,7 +35,7 @@ This repository contains shell scripts and C files that are created to develop s
 4. **4-puts.c** -  Prints exactly `"Programming is like building a multilingual puzzle`, followed by a new line. Use the function `puts`. You are not allowed to use `printf`. Your program should end with the value `0`.<br>
 5. **5-printf.c** - Prints exactly `with proper grammar, but the outcome is a piece of art,`, followed by a new line. Use the function `printf`. You are not allowed to use the function `puts`. The program should return `0`. The program should compile without warning when using the `-Wall gcc` option.<br>
 6. **6-size.c** - Prints the size of various types on the computer it is compiled and run on. Warnings are allowed. Your program should return `0`. You might have to install the package `libc6-dev-i386` on your Linux to test the `-m32 gcc` option. 
-`
+```
 julien@ubuntu:~/c/0x00$ gcc 6-size.c -m32 -o size32 2> /tmp/32
 julien@ubuntu:~/c/0x00$ gcc 6-size.c -m64 -o size64 2> /tmp/64
 julien@ubuntu:~/c/0x00$ ./size32
@@ -53,7 +53,7 @@ Size of a float: 4 byte(s)
 julien@ubuntu:~/c/0x00$ echo $?
 0
 julien@ubuntu:~/c/0x00$ 
-`<br>
+```<br>
 7. **100-intel** - Generates the assembly code (Intel syntax) of a C code and save it in an output file. The C file name will be saved in the variable `$CFILE`. The output file should be named the same as the C file, but with the extension `.s` instead of `.c`.<br>
 8. **101-quote.c** - prints exactly `and that piece of art is useful" - Dora Korpar, 2015-10-19`, followed by a new line, to the standard error. You are not allowed to use any functions listed in the NAME section of the man (3) `printf` or man (3) `puts`. The program should return 1.<br>
 
