@@ -61,7 +61,7 @@ This repository contains scripts that are created as part of the learning object
 7. **8-print_diagsums.c** -  prints the sum of the two diagonals of a square matrix of integers.
     * Prototype: `void print_diagsums(int *a, int size);`
     * Example below:
-        * ```
+        ```
 julien@ubuntu:~/0x07$ cat 8-main.c
 #include "main.h"
 #include <stdio.h>
