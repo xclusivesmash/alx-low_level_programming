@@ -2,7 +2,6 @@
 #define MAIN_H
 
 /* Included libs */
-#include <stdio.h>
 
 /* Prototypes */
 int _putchar(char c);
