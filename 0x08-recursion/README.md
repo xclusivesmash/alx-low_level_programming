@@ -1,4 +1,4 @@
- - Recursion
+# C - Recursion
 
 ### Description
 This repository contains scripts that are created as part of the learning objectives of programming at ALX SE programme. The emphasis is on enforcing programming skills at ALX SE Programme. This repository has C files created for a deeper understanding of recursion.
