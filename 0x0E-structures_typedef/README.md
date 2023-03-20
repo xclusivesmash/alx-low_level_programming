@@ -77,7 +77,9 @@ julien@ubuntu:~/0x0d. structures, typedef$
 5. **5-free_dog.c** - frees dogs.
     * Prototype: `void free_dog(dog_t *d);`
 <br>
+
 ---
+
 ### Author
 * Siphamandla Matshiane
 
