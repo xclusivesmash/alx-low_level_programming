@@ -72,6 +72,7 @@ typedef struct op
     int (*f)(int a, int b);
 } op_t;
 ```
+
     * **3-op_functions.c**:
         * This file should contain the 5 following functions (not more):
             * `op_add`: returns the sum of `a` and `b`. Prototype: `int op_add(int a, int b);`
@@ -93,6 +94,7 @@ typedef struct op
             * You are not allowed to use more than one `while` loop in your code
             * If `s` does not match any of the 5 expected operators (`+`, `-`, `*`, `/`, `%`), return `NULL`
             * You are only allowed to declare these two variables in this function:
+
 ```
 op_t ops[] = {
         {"+", op_add},
@@ -104,6 +106,7 @@ op_t ops[] = {
     };
     int i;
 ```
+
     * **3-main.c**:
         * This file should contain your `main` function only.
             * You are not allowed to code any other function than `main` in this file
@@ -111,7 +114,8 @@ op_t ops[] = {
             * You have to use `atoi` to convert arguments to `int`
             * You are not allowed to use any kind of loop
             * You are allowed to use a maximum of 3 `if` statements
-    * ***Compilation and examples*:
+    * **Compilation and examples**:
+
 ```
 julien@ubuntu:~/0x0e. Function pointers$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 3-op_functions.c 3-get_op_func.c -o calc
 julien@ubuntu:~/0x0e. Function pointers$ ./calc 1 + 1
