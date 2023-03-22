@@ -58,20 +58,7 @@ This repository contains scripts that are created as part of the learning object
     * if the user tries to divide (`/` or `%`) by `0`, print `Error`, followed by a new line, and exit with the status `100`
     * This task requires that you create four different files.
     * **3-calc.h**:
-        * This file should contain all the function prototypes and data structures used by the program. You can use this structure:
-```
-/**
- * struct op - Struct op
- *
- * @op: The operator
- * @f: The function associated
- */
-typedef struct op
-{
-    char *op;
-    int (*f)(int a, int b);
-} op_t;
-```
+        * This file should contain all the function prototypes and data structures used by the program. You can use this structur
 
     * **3-op_functions.c**:
         * This file should contain the 5 following functions (not more):
