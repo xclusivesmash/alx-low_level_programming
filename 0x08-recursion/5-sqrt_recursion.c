@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* test_root - searches for a root of a number
+* _sqrt_check - searches for a root of a number
 * @n: input integer.
 * @base: iteration root number.
 * Return: base if true.
