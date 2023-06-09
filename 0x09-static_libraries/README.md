@@ -25,14 +25,14 @@ This repository contains scripts that are created as part of the learning object
 ### Scripts
 0. **libmy.a** - a library (static) containing all the object files generated from `.c` files.
 <br>
-1. **create_static_lib.sh** - Bash file that creates a static library called `liball.a`form all the `.c` files in the curretn directory.
+1. **create_static_lib.sh** - Bash file that creates a static library called `liball.a` from all the `.c` files in the curretn directory.
 <br>
 
 ### Additional notes.
 To use a static library when running a program perform the following command:
 * `gcc [filename] -L[directory] -l[libname] -o [output_filename]`
 
-**Note** - `filename` is the name of the file to be compiled. `directory` is where the created library is located. `libname`is the name of the library to be used. If the library is called `libmy.a`, you can ommit the prefix `lib` and the suffix `.a` since the linker adds them back during compilation. `output_filename` is the name of your executable file. If the `-o` option is not specified, by default you get `a.out` on unix system.
+* **Note** - `filename` is the name of the file to be compiled. `directory` is where the created library is located. `libname`is the name of the library to be used. If the library is called `libmy.a`, you can ommit the prefix `lib` and the suffix `.a` since the linker adds them back during compilation. `output_filename` is the name of your executable file. If the `-o` option is not specified, by default you get `a.out` on unix system.
 
 ---
 ### Author
