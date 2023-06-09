@@ -25,7 +25,8 @@ This repository contains scripts that are created as part of the learning object
 ### Scripts
 0. **libmy.a** - a library (static) containing all the object files generated from `.c` files.
 <br>
-1. **create_static_lib.sh** - Bash file that creates a static library called `liball.a` from all the `.c` files in the curretn directory.
+
+1. **create_static_lib.sh** - Bash file that creates a static library called `liball.a` from all the `.c` files in the current directory.
 <br>
 
 ### Additional notes.
