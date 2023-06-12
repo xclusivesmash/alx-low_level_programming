@@ -1,6 +1,5 @@
 # C - malloc, free
 
----
 ### Description
 This repository contains scripts that are created as part of the learning objectives of programming at ALX SE programme. The emphasis is on enforcing problem solving skills through programming and other technologies. This repository contains `.c` files created for a deeper understanding of dynamic memory allocation.
 
