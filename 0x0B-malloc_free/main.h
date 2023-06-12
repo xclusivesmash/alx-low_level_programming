@@ -1,6 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/* libraries */
+#include <stdio.h>
+#include <stdlib.h>
+
 /* function prototypes */
 int _putchar(char c);
 char *create_array(unsigned int size, char c);
