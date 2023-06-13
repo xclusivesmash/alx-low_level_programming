@@ -19,6 +19,23 @@ int word_count(char *s)
 }
 
 /**
+ * free_double_pointer - frees some memory in heap.
+ * @head: head pointer.
+ * @positions: pointers to free.
+ * Return: void
+ */
+void free_double_pointer(char **head, int positions)
+{
+	int i;
+
+	if (head == NULL)
+		free(head);
+	for (i = 0; i < positions; i++)
+		free(head[i]);
+	free(head);
+}
+
+/**
  * strtow - splits a string into words.
  * @str: input string.
  * Return: pointer to the new string.
@@ -29,14 +46,11 @@ char **strtow(char *str)
 	int nwords = word_count(str), i, word_length;
 	int j, k = 0;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || *str == '\0' || (*str == ' ' && *(str + 1) == '\0'))
 		return (NULL);
 	store = malloc(sizeof(char *) * nwords + 1);
 	if (store == NULL)
-	{
-		free(store);
 		return (NULL);
-	}
 	for (i = 0; i < nwords; i++)
 	{
 		word_length = 0;
@@ -51,9 +65,7 @@ char **strtow(char *str)
 		store[i] = malloc(sizeof(char) * word_length + 1);
 		if (store[i] == NULL)
 		{
-			for (i = 0; i <= nwords; i++)
-				free(store[i]);
-			free(store);
+			free_double_pointer(store, nwords);
 			return (NULL);
 		}
 		while (*str == ' ')
