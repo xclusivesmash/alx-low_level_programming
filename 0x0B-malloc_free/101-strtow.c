@@ -9,6 +9,7 @@ int word_count(char *s)
 {
 	int i, nwords = 0;
 
+	i = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] != ' ' && (s[i + 1] == ' ' || s[i + 1] == '\0'))
@@ -46,7 +47,7 @@ char **strtow(char *str)
 	int nwords = word_count(str), i, word_length;
 	int j, k = 0;
 
-	if (str == NULL || *str == '\0' || (str[0] == ' ' && str[1] == '\0'))
+	if (str == NULL || *str == '\0' || word_count(str) == 0)
 		return (NULL);
 	store = malloc(sizeof(char *) * (nwords + 1));
 	if (store == NULL)
