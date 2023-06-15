@@ -1,6 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/* headers */
+#include <stdio.h>
+#include <stdlib.h>
+
 /* function prototypes */
 int _putchar(char c);
 void *malloc_checked(unsigned int b);
