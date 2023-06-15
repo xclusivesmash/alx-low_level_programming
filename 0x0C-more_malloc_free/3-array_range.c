@@ -19,7 +19,7 @@ int *array_range(int min, int max)
 		return (NULL);
 
 	i = 0;
-	while (i >= min && i <= max)
+	while ((i + min) >= min && (i + min) <= max)
 	{
 		store[i] = min + i;
 		i = i + 1;
