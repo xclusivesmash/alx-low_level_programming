@@ -43,7 +43,23 @@ This repository contains scripts that are created as part of the learning object
     * If size <= `0`, return `-1`
 <br>
 
-3. **3-main.c**- This file should contain your `main` function only.
+3. The program that performs simple operations.
+    * You are allowed to use the standard library
+    * Usage: `calc` `num1` `operator` `num2`
+    * You can assume `num1` and `num2` are integers, so use the atoi function to convert them from the string input to `int`
+    * `operator` is one of the following:
+        * `+`: addition
+        * `-`: subtraction
+        * `*`: multiplication
+        * `/`: division
+        * `%`: modulo
+    * The program prints the result of the operation, followed by a new line
+    * You can assume that the result of all operations can be stored in an `int`
+    * if the number of arguments is wrong, print `Error`, followed by a new line, and exit with the status `98`
+    * if the operator is none of the above, print `Error`, followed by a new line, and exit with the status `99`
+    * if the user tries to divide (`/` or `%`) by `0`, print `Error`, followed by a new line, and exit with the status `100`
+
+    * **3-main.c**- This file should contain your `main` function only.
     * You are not allowed to code any other function than `main` in this file
     * You are not allowed to directly call `op_add`, `op_sub`, `op_mul`, `op_div` or `op_mod` from the `main` function
     * You have to use `atoi` to convert arguments to `int`
@@ -82,21 +98,6 @@ op_t ops[] = {
     int i;
 ```
 
-    * The program that performs simple operations.
-    * You are allowed to use the standard library
-    * Usage: `calc` `num1` `operator` `num2`
-    * You can assume `num1` and `num2` are integers, so use the atoi function to convert them from the string input to `int`
-    * `operator` is one of the following:
-        * `+`: addition
-        * `-`: subtraction
-        * `*`: multiplication
-        * `/`: division
-        * `%`: modulo
-    * The program prints the result of the operation, followed by a new line
-    * You can assume that the result of all operations can be stored in an `int`
-    * if the number of arguments is wrong, print `Error`, followed by a new line, and exit with the status `98`
-    * if the operator is none of the above, print `Error`, followed by a new line, and exit with the status `99`
-    * if the user tries to divide (`/` or `%`) by `0`, print `Error`, followed by a new line, and exit with the status `100`
 <br>
 
 4. **100-main_opcodes.c** - a program that prints the <a href="https://intranet.alxswe.com/rltoken/5eSu8Ohx0ddeNGmaeDo_zQ">opcodes</a> of its own main function.
