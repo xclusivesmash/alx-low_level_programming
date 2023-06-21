@@ -69,6 +69,7 @@ This repository contains scripts that are created as part of the learning object
         * You are not allowed to use more than one `while` loop in your code
         * If `s` does not match any of the 5 expected operators `(+, -, *, /, %)`, return `NULL`
         * You are only allowed to declare these two variables in this function:
+
 ```
 op_t ops[] = {
         {"+", op_add},
@@ -80,6 +81,7 @@ op_t ops[] = {
     };
     int i;
 ```
+
     * The program that performs simple operations.
     * You are allowed to use the standard library
     * Usage: `calc` `num1` `operator` `num2`
