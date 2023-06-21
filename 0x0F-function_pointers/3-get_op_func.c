@@ -1,27 +1,29 @@
 #include "3-calc.h"
 
 /**
- * get_op_func - returns the correct function based
- * on s (operator)
- * @s: input operator.
- * Return: function pointer.
- */
-int (*get_op_func(char *s))(int, int)
+* get_op_func - matches operator with
+* correct function.
+* @s: operator given
+* Return: pointer to the correct function
+*/
+int (*get_op_func(char *s))(int a, int b)
 {
 	op_t ops[] = {
-	{"+", op_add},
-	{"-", op_sub},
-	{"*", op_mul},
-	{"/", op_div},
-	{"%", op_mod},
-	{NULL, NULL}
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
 	};
 	int i;
 
-	for (i = 0; ops[i].op != NULL; i++)
+	i = 0;
+	while (ops[i].op != NULL)
 	{
-		if (*ops[i].op == *s)
+		if (*s == *ops[i].op)
 			return (ops[i].f);
+		i++;
 	}
 	return (NULL);
 }
