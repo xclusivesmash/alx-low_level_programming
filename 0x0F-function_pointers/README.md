@@ -69,7 +69,8 @@ This repository contains scripts that are created as part of the learning object
         * You are not allowed to use more than one `while` loop in your code
         * If `s` does not match any of the 5 expected operators `(+, -, *, /, %)`, return `NULL`
         * You are only allowed to declare these two variables in this function:
-```op_t ops[] = {
+```
+op_t ops[] = {
         {"+", op_add},
         {"-", op_sub},
         {"*", op_mul},
