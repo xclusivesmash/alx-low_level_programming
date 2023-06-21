@@ -1,36 +1,44 @@
 #include "3-calc.h"
 
 /**
- * main - performs simple operations based on input.
- * @argc: argument count.
- * @argv: argument vector.
- * Return: integer vaues based on operation.
- */
+* main - takes input from user through
+* command line, pass the arguments to
+* relevant function to do some computation
+* and prints the results
+* @argc: argument count
+* @argv: argument vector
+*
+* Return: Always 0 (on success)
+*/
 int main(int argc, char **argv)
 {
-	int number1, number2, results;
-	int (*funct)(int, int) = get_op_func(argv[2]);
+	int num1, num2, result;
+	int (*f)(int, int);
 
+	/* check #arguments */
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (*argv[2] != '+' && *argv[2] != '-' && *argv[2] != '*'
-			&& *argv[2] != '/' && *argv[2] != '%' &&
-			funct == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-	if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == 0)
+
+	/* check div/mod by zero */
+	if ((argv[2][0] == '%' || argv[2][0] == '/') && argv[3][0] == '0')
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	number1 = atoi(argv[1]);
-	number2 = atoi(argv[3]);
-	results = funct(number1, number2);
-	printf("%d\n", results);
+
+	/* check operator */
+	f = get_op_func(argv[2]);
+	if (f == NULL || (argv[2][1] != '\0'))
+	{
+		printf("Error\n");
+		exit(99);
+	}
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	result = f(num1, num2);
+	printf("%d\n", result);
 	return (0);
 }
