@@ -22,7 +22,7 @@ unsigned int _strlen(const char *s)
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *store, *temp = *head;
+	list_t *store, *tmp;
 
 	store = malloc(sizeof(list_t));
 	if (store == NULL)
@@ -32,16 +32,16 @@ list_t *add_node_end(list_t **head, const char *str)
 	store->len = _strlen(str);
 	store->str = strdup(str);
 	store->next = NULL;
-
-	if (*head == NULL)
+	if (*head != NULL)
+	{
+		tmp = *head;
+		while (tmp->next != NULL)
+			tmp = tmp->next;
+		tmp->next = store;
+	}
+	else
 	{
 		*head = store;
-		return (store);
 	}
-
-	while (temp->next)
-		temp = temp->next;
-
-	temp->next = store;
 	return (store);
 }
