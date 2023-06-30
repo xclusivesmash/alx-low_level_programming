@@ -36,5 +36,5 @@ list_t *add_node(list_t **head, const char *str)
 	store->str = strdup(str);
 	store->next = *head;
 	*head = store;
-	return (store);
+	return (*head);
 }
