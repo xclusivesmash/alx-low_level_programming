@@ -114,7 +114,7 @@ This repository contains scripts that are created as part of the learning object
 
 ---
 ### Author
-* Siphamandla Matshiane, [Twitter](https://twitter.com/sbumatshiane916)
+* Siphamandla Matshiane, [![Twitter](http://i.imgur.com/wWzX9uB.png)](https://twitter.com/sbumatshiane916)
 
 ### LICENSE
 <a href="https://www.alxafrica.com/software-engineering/">ALX Software Engineering</a>
