@@ -4,8 +4,8 @@
 This repository contains scripts that are created as part of the learning objectives of programming at ALX SE programme. The emphasis is on enforcing problem solving skills through programming and other technologies. This repository contains `.c` files created for a deeper understanding of singly linked lists in C.
 
 ### Learning Objectives
-* When and why using linked lists vs arrays
-* How to build and use linked lists
+- When and why using linked lists vs arrays
+- How to build and use linked lists
 
 ### Requirements
 - Language(s): `C`
