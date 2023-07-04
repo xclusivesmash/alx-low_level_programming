@@ -1,7 +1,7 @@
 # C - More singly linked lists
 
 ### Description
-This repository contains scripts that are created as part of the learning objectives of programming at ALX SE programme. The emphasis is on enforcing problem solving skills through programming and other technologies. This repository contains `.c` files created for a deeper understanding of singly linked lists in C.
+> This repository contains scripts that are created as part of the learning objectives of programming at ALX SE programme. The emphasis is on enforcing problem solving skills through programming and other technologies. This repository contains `.c` files created for a deeper understanding of singly linked lists in C.
 
 ### Learning Objectives
 - When and why using linked lists vs arrays
@@ -10,7 +10,7 @@ This repository contains scripts that are created as part of the learning object
 ### Requirements
 - Language(s): `C`
 - Operating system: `Ubuntu 20.04 LTS`
-- Style Guide: <a href="https://github.com/alx-tools/Betty/tree/master">Betty Style</a>
+- Style Guide: [Betty Style](https://github.com/holbertonschool/Betty/wiki)
 - Allowed editors: `vi`, `vim`, or `emacs`
 - Compilation should be achieved using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
 - The only C standard library functions allowed are `malloc`, `free`, and `exit`. Any use of functions like `printf`, `puts`, `calloc`, `realloc` etc… is forbidden
@@ -20,7 +20,6 @@ This repository contains scripts that are created as part of the learning object
 - All header files should be include guarded.
 - The prototypes of all your functions and the prototype of the function `_putchar` should be included in your header file called `lists.h`
 
----
 ### Scripts
 
 0. **0-print_listint.c** - Write a function that prints all the elements of a `listint_t` list.
@@ -115,6 +114,5 @@ This repository contains scripts that are created as part of the learning object
 ---
 ### Author
 * Siphamandla Matshiane, [![Twitter](http://i.imgur.com/wWzX9uB.png)](https://twitter.com/sbumatshiane916)
-
 ### LICENSE
 <a href="https://www.alxafrica.com/software-engineering/">ALX Software Engineering</a>
