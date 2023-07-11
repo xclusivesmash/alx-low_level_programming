@@ -37,8 +37,7 @@ int _exit_status(int error_no, char *NAME, int fd)
 int main(int argc, char **argv)
 {
 	int fh, fh1, readn, written;
-	char *buffer[1024];
-	mode_t modes;
+	char buffer[1024];
 	size_t buff_size = 1024;
 
 	if (argc != 3)
@@ -46,27 +45,25 @@ int main(int argc, char **argv)
 	fh = open(argv[1], O_RDONLY);
 	if (fh == -1)
 		_exit_status(98, argv[1], 0);
-	modes = 0664;
-	fh1 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, modes);
+	fh1 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fh1 == -1)
 		_exit_status(99, argv[2], 0);
 
 	readn = read(fh, buffer, buff_size);
-	while (readn != 0)
+	while (readn > 0)
 	{
 		if (readn == -1)
 			_exit_status(98, argv[1], 0);
 		written = write(fh1, buffer, readn);
 		if (written == -1)
 			_exit_status(99, argv[2], 0);
+		readn = read(fh1, buffer, buff_size);
 	}
 	if (close(fh) == -1)
 		_exit_status(100, NULL, fh);
-	else
-		close(fh);
+	close(fh);
 	if (close(fh1) == -1)
 		_exit_status(100, NULL, fh1);
-	else
-		close(fh1);
+	close(fh1);
 	return (0);
 }
