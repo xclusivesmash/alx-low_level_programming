@@ -13,12 +13,12 @@ unsigned int binary_to_uint(const char *b)
 
 	/* ERROR CHECK */
 	if (b == NULL)
-                return (0);
+		return (0);
 	/* STORE THE ORIGINAL MEMORY */
 	saved = b;
 	/* MOVE b TILL THE NULL BYTE CHAR IS REACHED */
 	while (*b != '\0')
-                b = b + 1;
+		b = b + 1;
 	/* REVERSE b BY 1 BYTE */
 	b = b - 1;
 	number = 0;
