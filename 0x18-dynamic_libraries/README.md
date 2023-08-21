@@ -73,6 +73,8 @@ char *_strstr(char *haystack, char *needle);
   * usage: ./gm n1 n2 n3 n4 n5 bonus
 ```
 
+<br>
+
     * You can’t modify the program `gm` itself as Master Sysadmin Sylvain (MSS) always checks its [MD5](https://intranet.alxswe.com/rltoken/uFp7pQzfyzDA7z2cVOKIaQ) before running it
     * The system is an `Linux Ubuntu 16.04`
     * The server has internet access
@@ -85,7 +87,6 @@ char *_strstr(char *haystack, char *needle);
     * Before running the `gm` program, MSS always check the content of the directory
     * MSS always exit after running the program `gm`
     * TL;DR; This is what is going to happen
-
 <br>
 
 ## Author
