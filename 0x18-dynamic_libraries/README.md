@@ -63,7 +63,7 @@ char *_strstr(char *haystack, char *needle);
 
 3. **101-make_me_win.sh** - I bought a ticket for the Giga Millions and chose these numbers: 9, 8, 10, 24, 75 + 9. If you could run two commands on the same server where the Giga Millions program runs, could you make me win the Jackpot?
     * Our mole got us a copy of the program, you can download it [here](https://github.com/alx-tools/0x18.c). Our mole also gave us a piece of documentation:
-```\/* Giga Millions program                                                                                    
+```Giga Millions program                                                                                    
   * Players may pick six numbers from two separate pools of numbers:                                                
   * - five different numbers from 1 to 75 and                                                                       
   * - one number from 1 to 15                                                                                       
@@ -72,6 +72,8 @@ char *_strstr(char *haystack, char *needle);
   *                                                                                                                 
   * usage: ./gm n1 n2 n3 n4 n5 bonus
 ```
+
+<br>
 
     * You can’t modify the program `gm` itself as Master Sysadmin Sylvain (MSS) always checks its [MD5](https://intranet.alxswe.com/rltoken/uFp7pQzfyzDA7z2cVOKIaQ) before running it
     * The system is an `Linux Ubuntu 16.04`
