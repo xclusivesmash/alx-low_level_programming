@@ -77,7 +77,7 @@ char *_strstr(char *haystack, char *needle);
     * The system is an `Linux Ubuntu 16.04`
     * The server has internet access
     * Our mole will be only able to run two commands from a shell script, without being detected by MSS
-    * Your shell script should be maximum 3 lines long. You are not allowed to use `;`, `&&`, `||`, `|`, \`(it would be detected by MSS), and have a maximum of two commands
+    * Your shell script should be maximum 3 lines long. You are not allowed to use `;`, `&&`, `||`, `|`(it would be detected by MSS), and have a maximum of two commands
     * Our mole has only the authorization to upload one file on the server. It will be your shell script
     * Our mole will run your shell script this way: `mss@gm_server$ . ./101-make_me_win.sh`
     * Our mole will run your shell script from the same directory containing the program `gm`, exactly 98 seconds before MSS runs gm with my numbers: `./gm 9 8 10 24 75 9`
