@@ -121,7 +121,6 @@ typedef struct shash_table_s
      shash_node_t *stail;
 } shash_table_t;
 ```
-<br>
 7. **Continuation...** - do the following:
     * Rewrite the previous functions using these data structures:
         * `shash_table_t *shash_table_create(unsigned long int size);`
