@@ -1,3 +1,8 @@
+/**
+ * hash_djb2 - hash function based on Dan Benestein's algorithm.
+ * @str: input string.
+ * Return: hash value for @str.
+ */
 unsigned long int hash_djb2(const unsigned char *str)
 {
 	unsigned long int hash;
