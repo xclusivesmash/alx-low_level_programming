@@ -12,6 +12,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	hash_node_t *node;
 	char *VALUE;
 
+	/* INPUT HANDLING */
+	if (ht == NULL || key == NULL)
+		return (NULL);
 	/* GET HASH USIGN KEY */
 	index = key_index((const unsigned char *)key, ht->size);
 	/* ACCESS THE NODE AT KEY */
