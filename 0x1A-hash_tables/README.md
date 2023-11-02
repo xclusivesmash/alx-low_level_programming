@@ -84,7 +84,7 @@
     * Read [PHP Internals Book: HashTable](https://intranet.alxswe.com/rltoken/SIdpN9PE_9aYBCHUGPX-fw)
     * Use the same hash function
     * Use these data structures:
-```* struct shash_node_s - Node of a sorted hash table
+```struct shash_node_s - Node of a sorted hash table
  *
  * @key: The key, string
  * The key is unique in the HashTable
