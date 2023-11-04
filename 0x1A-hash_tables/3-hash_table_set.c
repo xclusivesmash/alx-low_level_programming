@@ -1,59 +1,77 @@
 #include "hash_tables.h"
 
 /**
- * add_node_beginning - adds an element at the beginning of linked list.
- * @head: head node.
+ * collision_handling - handles collisions using linked list method.
+ * @ht: hash table.
  * @key: input string.
- * @value: value asscoiated with @key.
- * Return: void
+ * @value: input string.
+ * @index: index.
+ * Return: 1 on success. Otherwise, 0.
  */
-void add_node_beginning(hash_node_t **head, const char *key, const char *value)
+int collision_handling(hash_table_t *ht, const char *key, const char *value,
+		unsigned long int index)
 {
-	hash_node_t *new;
+	hash_node_t *node = NULL;
+	char *KEY, *VALUE;
 
-	new = malloc(sizeof(hash_node_t));
-	if (new == NULL)
-		return;
-	new->key = strdup(key);
-	new->value = strdup(value);
-	new->next = *head;
-	*head = new;
+	node = malloc(sizeof(hash_node_t));
+	if (node == NULL)
+		return (0);
+	KEY = strdup(key);
+	if (KEY == NULL)
+	{
+		free(node);
+		return (0);
+	}
+	VALUE = strdup(value);
+	if (VALUE == NULL)
+	{
+		free(KEY);
+		free(node);
+		return (0);
+	}
+	node->key = KEY;
+	node->value = VALUE;
+	if ((ht->array)[index] == NULL)
+		node->next = NULL;
+	else
+		node->next = (ht->array)[index];
+	(ht->array)[index] = node;
+	return (1);
 }
 
 /**
  * hash_table_set - adds an element to hash table.
  * @ht: hash table.
  * @key: input string.
- * @value: value assigned to @key.
- * Return: 1 on success. 0 otherwise.
+ * @value: input string.
+ * Return: 1 if succeeded. Otherwise, 0.
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *list, *new;
+	hash_node_t *node = NULL;
+	char *VALUE;
 
-	/* INPUT CHECK */
-	if (key == NULL || strlen(key) == 0 || value == NULL)
+	if (ht == NULL || (ht->array) == NULL || key == NULL
+			|| strlen(key) == 0 || value == NULL)
 		return (0);
+	/* GET INDEX FROM HASH TABLE */
 	index = key_index((const unsigned char *)key, ht->size);
-	list = (ht->array)[index];
-	if (list == NULL)
-	{ /* LINKED LIST IS EMPTY */
-		new = malloc(sizeof(hash_node_t));
-		if (new == NULL)
+	/* ACCESS NODE FROM TABLE USING INDEX */
+	node = (ht->array)[index];
+	/* CHEKC IF THERE ALREADY EXISTS A NODE WITH DIFF. KEY*/
+	while (node != NULL && (strcmp(key, node->key) != 0))
+		node = node->next;
+	if (node != NULL)
+	{
+		VALUE = strdup(value);
+		if (VALUE == NULL)
 			return (0);
-		new->key = strdup(key);
-		new->value = strdup(value);
-		new->next = NULL;
-		list = new;
+		if (node->value)
+			free(node->value); /* FREE ALREADY EXISTING VALUE */
+		node->value = VALUE;
 		return (1);
 	}
-	else
-	{ /* LINKED LIST IS NON-EMPTY */
-		if (strcmp(list->key, key) == 0) /* replacement */
-			list->value = strdup(value);
-		else /* new item */
-			add_node_beginning(&list, key, value);
-		return (0);
-	}
+	return (collision_handling(ht, key, value, index));
 }
