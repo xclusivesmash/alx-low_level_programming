@@ -105,7 +105,7 @@
 <br>
 
 ## Author
-- Siphamandla Matshiane, ![X (formerly Twitter) URL](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.co    m%2Fsbumatshiane916)
+- Siphamandla Matshiane, ![X (formerly Twitter) URL](https://img.shields.io/twitter/url?url=www.x.com%2Fsbumatshiane916)
 
 ## LICENSE
 - [ALX Software Engineering](https://www.alxafrica.com/software-engineering)
