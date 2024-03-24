@@ -1,19 +1,28 @@
+.PHONY: all clean oclean fclean re
 CC = gcc
-SRC = main.c school.c
+SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
+# builds the main executable.
 all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
+# removes all Emacs and Vim temporary files along with the executable.
 clean:
 	$(RM) *~ $(NAME)
 
+# removes all object files.
 oclean:
 	$(RM) $(OBJ)
 
+# removes all Emacs and Vim temporary files,
+# the object files, and the executable itself.
 fclean: clean oclean
 
+# removes all objects files and
+# and forces recompilation of all
+# source files.
 re: oclean all
