@@ -4,6 +4,7 @@
 /* Include libraries to use */
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 
 /* Structure definitins */
 /**
